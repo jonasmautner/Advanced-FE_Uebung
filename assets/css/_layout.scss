@@ -1,0 +1,5 @@
+@for $i from 2 through 4 {
+  @if ($i != 2) {
+    @include grid($i);
+  }
+}

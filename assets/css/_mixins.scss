@@ -1,0 +1,15 @@
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+
+@mixin grid($columns, $gap:1em, $justify:center, $align:center) {
+  .grid-#{$columns} {
+    display: grid;
+    grid-template-columns: repeat(#{$columns}, 1fr);
+    justify-content: $justify;
+    align-items: $align;
+    grid-gap: $gap;
+  }
+}

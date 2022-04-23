@@ -1,0 +1,24 @@
+$primary: #1871c7;
+$warning: #de4242;
+$success: #b3ef2f;
+$white: #fff;
+$black: #000;
+
+$sans-serif: "IBM Plex Sans", "Open Sans", "Arial", sans-serif;
+
+$font-light: 300;
+$font-regular: 400;
+$font-semibold: 600;
+$font-bold: 700;
+
+@import "mixins";
+@import "layout";
+@import "components";
+
+body {
+  font-family: $sans-serif;
+}
+
+h1 {
+  font-weight: $font-semibold;
+}
