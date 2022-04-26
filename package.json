@@ -8,6 +8,8 @@
     "grunt-contrib-cssmin": "^4.0.0",
     "grunt-contrib-sass": "^2.0.0",
     "grunt-contrib-uglify": "^5.2.1",
-    "grunt-contrib-watch": "^1.1.0"
+    "grunt-contrib-watch": "^1.1.0",
+    "jquery": "^3.6.0",
+    "popper": "^1.0.1"
   }
 }
