@@ -36,8 +36,10 @@ module.exports = function(grunt) {
         },
         cssmin: {
             css: {
-                src: 'assets/css/main.css',
-                dest: 'assets/css/main.min.css'
+                files: {
+                    'assets/css/main.min.css': 'assets/css/main.css',
+                    'assets/bootstrap/bootstrap-icons.min.css': 'assets/bootstrap/bootstrap-icons.css'
+                }
             }
         },
         uglify: {
