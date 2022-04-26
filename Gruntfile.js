@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
     grunt.initConfig({
-
         watch: {
             css: {
                 files: ['assets/css/*.scss'],
@@ -8,43 +7,50 @@ module.exports = function(grunt) {
                 options: {
                     livereload: true,
                 }
+            },
+            script: {
+                files: ['assets/js/*.js'],
+                tasks: ['concat', 'uglify']
             }
         },
         sass: {
             dist: {
-                files: {
-                    'node_modules/bootstrap/scss/bootstrap.css': 'node_modules/bootstrap/scss/bootstrap.scss',
-                    'node_modules/bootstrap/scss/bootstrap-grid.css': 'node_modules/bootstrap/scss/bootstrap-grid.scss',
-                    'node_modules/bootstrap/scss/bootstrap-reboot.css': 'node_modules/bootstrap/scss/bootstrap-reboot.scss',
-                    'node_modules/bootstrap/scss/bootstrap-utilities.css': 'node_modules/bootstrap/scss/bootstrap-utilities.scss',
-                    'assets/css/main.css': 'assets/css/main.scss'
-                },
+                src: 'assets/css/main.scss',
+                dest: 'assets/css/main.css',
                 options: {
                     style: 'expanded'
                 }
             }
         },
         concat: {
-            dist: {
-                src: 'node_modules/bootstrap/scss/bootstrap*.css',
-                dest: 'assets/css/bootstrap.main.css'
+            css: {
+                src: 'node_modules/bootstrap/dist/css/bootstrap*.min.css',
+                dest: 'assets/css/bootstrap.main.min.css'
+            },
+            script: {
+                src: 'node_modules/bootstrap/dist/js/bootstrap*.min.js',
+                dest: 'assets/js/bootstrap.main.min.js'
             }
         },
         cssmin: {
             dist: {
-                files: {
-                    'assets/css/bootstrap.main.min.css': 'assets/css/bootstrap.main.css',
-                    'assets/css/main.min.css': 'assets/css/main.css'
-                }
+                src: 'assets/css/main.css',
+                dest: 'assets/css/main.min.css'
+            }
+        },
+        uglify: {
+            dist: {
+                src: 'assets/js/main.js',
+                dest: 'assets/js/main.min.js'
             }
         }
-
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default', ['sass', 'concat', 'cssmin']);
+    grunt.registerTask('default', ['sass', 'concat', 'cssmin', 'uglify']);
 };
