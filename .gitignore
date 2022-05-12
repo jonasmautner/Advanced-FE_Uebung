@@ -1,6 +1,7 @@
 .idea/
 node_modules/
 template/
+assets/images/src/
 assets/js/main.min.js
 assets/css/main.min.css
 assets/css/main.css.map

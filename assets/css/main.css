@@ -7184,26 +7184,8 @@ nav.navbar.bootsnav.navbar-mobile .tab-content {
 * Author        : "ThemeSine"
 * Template Name :  Browny  HTML Template
 * Version       : 1.0
-==================================== */
-/*==================================
-font-family: 'Poppins', sans-serif;
-==================================== */
-/*=========== TABLE OF CONTENTS ===========
-1.  General css (Reset code)
-2.  Header
-3.  Welcome-hero
-4.  About me 
-5.  Education
-6.  Skill
-7.  Experience
-8.  Profiles
-9.  Portfolio
-10. Clients
-11. Contact
-
-/*-------------------------------------
-		1.General css (Reset code)
---------------------------------------*/
+====================================*/
+/* GENERAL -------------------------*/
 * {
   padding: 0;
   margin: 0;
@@ -7217,38 +7199,47 @@ font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  position: relative;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 16px;
-  color: #676a81;
-  background: #fff;
+  color: #43485c;
+  text-transform: inherit;
   max-width: 1920px;
   margin: 0 auto;
   overflow-x: hidden;
 }
 
 a, a:hover, a:active, a:focus {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  color: #43485c;
+  text-transform: inherit;
   display: inline-block;
   text-decoration: none;
-  color: #6a708e;
-  font-size: 16px;
   padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 18px;
   color: #43485c;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
+  text-transform: inherit;
   text-transform: capitalize;
+  margin: 0;
 }
 
 p {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  color: #43485c;
+  text-transform: inherit;
   margin: 0;
   line-height: 1.8;
-  color: #43485c;
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
 }
 
 img {
@@ -7277,17 +7268,12 @@ button {
   border: 0;
 }
 
-html, body {
-  height: 100%;
-  position: relative;
-}
-
 [placeholder]:focus::-webkit-input-placeholder {
-  -webkit-transition: opacity 0.3s 0.3s ease;
-  -moz-transition: opacity 0.3s 0.3s ease;
-  -ms-transition: opacity 0.3s 0.3s ease;
-  -o-transition: opacity 0.3s 0.3s ease;
-  transition: opacity 0.3s 0.3s ease;
+  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
   opacity: 0;
 }
 
@@ -7296,10 +7282,7 @@ html, body {
   clear: both;
 }
 
-/*=============Style css=========*/
-/*-------------------------------------
-        2. Header
---------------------------------------*/
+/* HEADER -------------------------*/
 .top-area {
   position: relative;
   z-index: 9999;
@@ -7316,27 +7299,25 @@ nav.navbar.bootsnav {
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
 }
 
-/*.navbar-brand*/
 .navbar-header a.navbar-brand, .navbar-header a.navbar-brand:hover, .navbar-header a.navbar-brand:focus {
-  display: inline-block;
-  color: #7fb32a;
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 20px;
-  font-weight: 600;
-  padding: 33px 0px 57px;
+  color: #7fb32a;
   text-transform: uppercase;
+  display: inline-block;
+  font-weight: 600;
+  padding: 33px 0 57px;
 }
 
-/*.navbar-brand*/
-/*.nav li*/
 nav.navbar.bootsnav ul.nav > li > a {
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  -webkit-transition: 0.3s linear;
-  -moz-transition: 0.3s linear;
-  -ms-transition: 0.3s linear;
-  -o-transition: 0.3s linear;
   transition: 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
 }
 
 nav.navbar.bootsnav ul.nav > li > a {
@@ -7357,7 +7338,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
 }
 
 .sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a {
-  color: #6a708e;
+  color: #43485c;
 }
 
 .sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:hover,
@@ -7366,8 +7347,6 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
   color: #7fb32a;
 }
 
-/*.nav li*/
-/*.menu-ui-design*/
 .menu-ui-design {
   overflow-y: scroll;
   height: 350px;
@@ -7378,15 +7357,13 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
 }
 
 .menu-ui-design::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 8px #000;
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .menu-ui-design::-webkit-scrollbar-thumb {
   background-color: #9ad23e;
 }
 
-/*.menu-ui-design*/
-/*.navbar-toggle */
 nav.navbar.bootsnav .navbar-toggle {
   position: relative;
   background-color: transparent;
@@ -7399,18 +7376,15 @@ nav.navbar.bootsnav .navbar-toggle i {
   color: #9ad23e;
 }
 
-/*.navbar-toggle */
-/*-------------------------------------
-        3.  Welcome-hero
---------------------------------------*/
+/* WELCOME -------------------------*/
 .welcome-hero {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   background-size: cover;
-  background: url(../images/about/welcome-banner.jpg) no-repeat center;
-  height: 890px;
+  background: url(../images/src/welcome-banner.jpg) no-repeat center;
+  min-height: 800px;
 }
 
 .welcome-hero:before {
@@ -7455,11 +7429,11 @@ nav.navbar.bootsnav .navbar-toggle i {
   background: #9ad23e;
   border: 1px solid #9ad23e;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.3s linear;
-  -moz-transition: 0.3s linear;
-  -ms-transition: 0.3s linear;
-  -o-transition: 0.3s linear;
   transition: 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
 }
 
 .header-text a:hover {
@@ -7468,10 +7442,7 @@ nav.navbar.bootsnav .navbar-toggle i {
   border: 1px solid #7fb32a;
 }
 
-/*.header-text-area*/
-/*-------------------------------------
-        4.  About
---------------------------------------*/
+/* ABOUT -------------------------*/
 .about {
   padding: 50px 0 100px;
 }
@@ -7480,19 +7451,18 @@ nav.navbar.bootsnav .navbar-toggle i {
   padding-top: 100px;
 }
 
-/*.single-about-txt*/
 .single-about-txt h3 {
   font-size: 18px;
-  color: #3c4258;
+  color: #676a81;
   text-transform: initial;
   line-height: 1.8;
 }
 
 .single-about-txt p {
   font-size: 16px;
-  color: #999fb3;
+  color: #43485c;
   padding: 35px 0 43px;
-  border-bottom: 1px solid #999fb3;
+  border-bottom: 1px solid #43485c;
 }
 
 .single-about-add-info {
@@ -7500,7 +7470,7 @@ nav.navbar.bootsnav .navbar-toggle i {
 }
 
 .single-about-add-info h3 {
-  color: #636a82;
+  color: #43485c;
   font-size: 16px;
   text-transform: capitalize;
 }
@@ -7512,8 +7482,6 @@ nav.navbar.bootsnav .navbar-toggle i {
   margin-top: 3px;
 }
 
-/*.single-about-txt*/
-/*.single-about-img */
 .single-about-img {
   position: relative;
   box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
@@ -7531,7 +7499,6 @@ nav.navbar.bootsnav .navbar-toggle i {
 
 .single-about-img img {
   max-width: 500px;
-  height: 468px;
 }
 
 .about-list-icon {
@@ -7546,7 +7513,6 @@ nav.navbar.bootsnav .navbar-toggle i {
   background: #1f2c6c;
 }
 
-/*.ab-list-icon */
 .about-list-icon ul {
   display: flex;
 }
@@ -7574,13 +7540,9 @@ nav.navbar.bootsnav .navbar-toggle i {
   margin-left: 6px;
 }
 
-/*.ab-list-icon */
-/*.single-about-img */
-/*-------------------------------------
-        5.  Education
---------------------------------------*/
+/* EDUCATION -------------------------*/
 .education {
-  background: #f9fbfd;
+  background: #fff;
   padding-top: 50px;
 }
 
@@ -7588,7 +7550,6 @@ nav.navbar.bootsnav .navbar-toggle i {
   padding: 80px 0;
 }
 
-/*.education-horizontal-timeline*/
 .education-horizontal-timeline .col-sm-4 {
   padding: 0 2px;
 }
@@ -7606,11 +7567,10 @@ nav.navbar.bootsnav .navbar-toggle i {
 }
 
 .single-horizontal-timeline p {
-  color: #999fb3;
+  color: #43485c;
   max-width: 335px;
 }
 
-/*.timeline-horizontal-border*/
 .timeline-horizontal-border {
   display: flex;
   align-items: center;
@@ -7625,7 +7585,7 @@ nav.navbar.bootsnav .navbar-toggle i {
 
 span.single-timeline-horizontal {
   display: inline-block;
-  background: #b2c1ce;
+  background: #43485c;
   height: 1px;
   width: 380px;
 }
@@ -7634,11 +7594,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   width: 88px;
 }
 
-/*.timeline-horizontal-border*/
-/*.education-horizontal-timeline*/
-/*-------------------------------------
-        6.  Skills
---------------------------------------*/
+/* SKILLS -------------------------*/
 .skill-content {
   padding: 50px 0 80px;
 }
@@ -7652,7 +7608,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   font-weight: 600;
   text-transform: uppercase;
   padding-bottom: 50px;
-  border-bottom: 1px solid #e5ebf2;
+  border-bottom: 1px solid #cad3e0;
 }
 
 .single-progress-txt {
@@ -7676,7 +7632,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 .progress {
   border-radius: 3px;
   overflow: visible;
-  background: #e6ecf3;
+  background: #cad3e0;
   height: 8px;
   margin-top: 15px;
   width: 85%;
@@ -7686,11 +7642,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 .progress-bar {
   background: #9ad23e;
   border-radius: 3px;
-  -webkit-transition: width 1.5s ease-in-out;
-  -ms-transition: width 1.5s ease-in-out;
-  -moz-transition: width 1.5s ease-in-out;
-  -o-transition: width 1.5s ease-in-out;
   transition: width 1.5s ease-in-out;
+  -webkit-transition: width 1.5s ease-in-out;
+  -moz-transition: width 1.5s ease-in-out;
+  -ms-transition: width 1.5s ease-in-out;
+  -o-transition: width 1.5s ease-in-out;
 }
 
 .tooltip {
@@ -7707,7 +7663,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   border-radius: 0;
 }
 
-.popOver + .tooltip > .tooltip-arrow {
+.popover + .tooltip > .tooltip-arrow {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 6px solid #fff;
@@ -7716,12 +7672,10 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   margin-left: 0;
 }
 
-/*-------------------------------------
-        7. Experience
--------------------------------------*/
+/* EXPERIENCE -------------------------*/
 .experience {
   padding: 50px 0 100px;
-  border-top: 1px solid #e5ebf2;
+  border-top: 1px solid #fff;
 }
 
 .experience-content {
@@ -7732,7 +7686,6 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   margin-bottom: 75px;
 }
 
-/*experience-time*/
 .experience-time {
   position: relative;
 }
@@ -7744,13 +7697,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 .experience-time h3 {
   font-size: 16px;
   font-weight: 300;
-  color: #636a82;
+  color: #43485c;
   margin-top: 14px;
   text-transform: uppercase;
 }
 
-/*experience-time*/
-/*main-timeline*/
 .main-timeline {
   position: relative;
 }
@@ -7759,7 +7710,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   content: "";
   width: 2px;
   height: 84%;
-  background: #b2c1ce;
+  background: #43485c;
   position: absolute;
   top: 1.5%;
   left: 45.8%;
@@ -7785,7 +7736,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 }
 
 .timeline-content h5 {
-  color: #636a82;
+  color: #676a81;
   font-size: 14px;
   font-weight: 300;
   margin: 18px 0 20px;
@@ -7793,7 +7744,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 
 .main-timeline .description {
   font-size: 14px;
-  color: #999fb3;
+  color: #43485c;
 }
 
 .main-timeline .timeline-content.right {
@@ -7815,12 +7766,10 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   display: none;
 }
 
-/*-------------------------------------
-        8. Profiles
---------------------------------------*/
+/* PROFILES -------------------------*/
 .profiles {
   padding: 50px 0 100px;
-  border: 1px solid #e5ebf2;
+  border: 1px solid #fff;
 }
 
 .profiles-content {
@@ -7843,18 +7792,18 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid #b2c1ce;
+  border-right: 1px solid #43485c;
   overflow: hidden;
-  -webkit-transition: background 0.5s linear;
-  -moz-transition: background 0.5s linear;
-  -ms-transition: background 0.5s linear;
-  -o-transition: background 0.5s linear;
   transition: background 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
 }
 
 .profile-icon-name {
   text-transform: capitalize;
-  color: #636a82;
+  color: #676a81;
   font-size: 16px;
 }
 
@@ -7863,7 +7812,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 }
 
 .profile-border {
-  border-bottom: 1px solid #b2c1ce;
+  border-bottom: 1px solid #fff;
 }
 
 .single-profile-overlay {
@@ -7882,24 +7831,24 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   background: -webkit-linear-gradient(left, #9ad23e 0%, #98d13b 100%);
   background: linear-gradient(to right, #9ad23e 0%, #98d13b 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#d92cf9", endColorstr="#b636ff",GradientType=1 );
+  transform: scale(0);
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
   -o-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
 }
 
 .single-profile:hover .single-profile-overlay {
+  transform: scale(1);
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
-  transform: scale(1);
   top: 0;
 }
 
@@ -7911,19 +7860,16 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   border: transparent;
 }
 
-/*-------------------------------------
-        9. Portfolio
---------------------------------------*/
+/* PORTFOLIO -------------------------*/
 .portfolio {
   padding: 50px 0 100px;
-  border: 1px solid #e5ebf2;
+  border: 1px solid #fff;
 }
 
 .portfolio-content {
   padding-top: 100px;
 }
 
-/* ---- .item ---- */
 .isotope:after {
   content: "";
   display: block;
@@ -7936,27 +7882,24 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   margin-bottom: 30px;
 }
 
-/*.item img*/
 .isotope .item img {
   width: 100%;
   height: 100%;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
 }
 
 .isotope .item:hover img {
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  -o-transform: scale(1.5);
   transform: scale(1.5);
+  -webkit-transform: scale(1, 5);
+  -moz-transform: scale(1, 5);
+  -ms-transform: scale(1, 5);
+  -o-transform: scale(1, 5);
 }
 
-/*.item img*/
-/*.isotope-overlay*/
 .isotope-overlay {
   position: absolute;
   height: 100%;
@@ -7967,16 +7910,16 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   text-transform: uppercase;
   justify-content: center;
   flex-direction: row;
+  transform: scale(0);
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
   -o-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
 }
 
 .isotope-overlay a {
@@ -7987,18 +7930,15 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 }
 
 .isotope .item:hover .isotope-overlay {
+  transform: scale(1);
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
-  transform: scale(1);
   top: 0;
 }
 
-/*.isotope-overlay*/
-/*-------------------------------------
-        10. Clients
---------------------------------------*/
+/* CLIENTS -------------------------*/
 .clients {
   padding-top: 50px;
 }
@@ -8020,11 +7960,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   border-radius: 0;
 }
 
-/*-------------------------------------
-        11. Contact
---------------------------------------*/
+/* CONTACT -------------------------*/
 .contact {
-  background: #f9fbfd;
+  background: #fff;
   padding: 50px 0 100px;
 }
 
@@ -8040,15 +7978,14 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   padding: 25px;
   font-size: 14px;
   border: 1px solid #fff;
-  border-radius: 0px;
+  border-radius: 0;
   box-shadow: none;
   outline: 0 !important;
-  background: #fff;
-  color: #636a82;
+  background: #c6ccde;
+  color: #43485c;
   resize: none;
 }
 
-/*--contct button--*/
 .contact-form .single-contact-btn {
   display: flex;
   align-items: center;
@@ -8058,28 +7995,28 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   margin-top: 3px;
   background: #9ad23e;
   border: 1px solid #9ad23e;
+  border-radius: 0.5em;
   cursor: pointer;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
 }
 
 .contact-form .single-contact-btn .contact-btn,
 .contact-form .single-contact-btn .contact-btn:focus {
-  margin-top: 0px;
+  margin-top: 0;
   outline: 0 !important;
   border: 0;
   color: #fff;
-  border-radius: 0px;
   font-size: 14px;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
 }
 
 .single-contact-btn:hover {
@@ -8088,76 +8025,70 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-/*--contct button--*/
-/* contact-adress */
 .contact-add-head h3 {
   font-size: 24px;
-  color: #3c4258;
+  color: #676a81;
 }
 
 .contact-add-head p {
   font-size: 16px;
   text-transform: capitalize;
-  color: #636a82;
+  color: #43485c;
   font-weight: 300;
   margin-top: 6px;
 }
 
-/* contact-adress */
-/*.contact-add-info */
 .contact-add-info {
   margin: 42px 0 52px;
 }
 
 .single-contact-add-info h3 {
-  color: #636a82;
+  color: #43485c;
   font-weight: 500;
 }
 
 .single-contact-add-info p {
-  color: #999fb3;
+  color: #43485c;
   font-size: 16px;
   margin-top: 18px;
 }
 
 .single-contact-add-info {
-  margin-bottom: 26px;
+  margin-bottom: 27px;
 }
 
-/*.contact-add-info */
-/*hm-foot-icon*/
 .hm-foot-icon ul li {
   float: left;
 }
 
 .hm-foot-icon ul li > a {
-  color: #636a82;
+  color: #676a81;
   margin-right: 18px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
 }
 
 .hm-foot-icon ul li > a:hover {
   color: #98d13b;
 }
 
-/*hm-foot-icon*/
+.footer-copyright {
+  background-color: #43485c;
+}
+
 .hm-footer-copyright p {
-  color: #888ea5;
+  color: #cad3e0;
   text-transform: capitalize;
   padding: 38px 0;
 }
 
 .hm-footer-copyright p a {
-  color: #888ea5;
+  color: #cad3e0;
 }
 
-/*===============================
-    Scroll Top
-===============================*/
 #scroll-Top .return-to-top {
   position: fixed;
   right: 30px;
@@ -8173,11 +8104,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   background: #9ad23e;
   border: 1px solid #9ad23e;
   border-radius: 50%;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
   z-index: 2;
 }
 
@@ -8188,11 +8119,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 }
 
 #scroll-Top .return-to-top i {
-  position: relative;
   bottom: 0;
-}
-
-#scroll-Top .return-to-top i {
   position: relative;
   animation-name: example;
   animation-direction: alternate;
