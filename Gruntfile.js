@@ -3,7 +3,7 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: ['assets/css/*.scss'],
-                tasks: ['sass', 'concat', 'cssmin'],
+                tasks: ['concat', 'sass', 'cssmin'],
                 options: {
                     livereload: true,
                 }
@@ -11,6 +11,18 @@ module.exports = function(grunt) {
             script: {
                 files: ['assets/js/*.js'],
                 tasks: ['concat', 'uglify']
+            }
+        },
+        concat: {
+            css: {
+                src: 'assets/css/_*.scss',
+                dest: 'assets/css/main.scss'
+            },
+            script: {
+                files: {
+                    'assets/bootstrap/bootstrap.main.min.js': 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+                    'assets/js/main.js': 'assets/js/_*.js'
+                }
             }
         },
         sass: {
@@ -22,24 +34,10 @@ module.exports = function(grunt) {
                 }
             }
         },
-        concat: {
-            css: {
-                src: 'node_modules/bootstrap/dist/css/bootstrap*.min.css',
-                dest: 'assets/bootstrap/bootstrap.main.min.css'
-            },
-            script: {
-                files: {
-                    'assets/bootstrap/bootstrap.main.min.js': 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
-                    'assets/js/main.js': 'assets/js/_*.js'
-                }
-            }
-        },
         cssmin: {
             css: {
-                files: {
-                    'assets/css/main.min.css': 'assets/css/main.css',
-                    'assets/bootstrap/bootstrap-icons.min.css': 'assets/bootstrap/bootstrap-icons.css'
-                }
+                src: 'assets/css/main.css',
+                dest: 'assets/css/main.min.css'
             }
         },
         uglify: {
@@ -49,11 +47,10 @@ module.exports = function(grunt) {
             }
         }
     });
-
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.registerTask('default', ['sass', 'concat', 'cssmin', 'uglify']);
+    grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'uglify']);
 };
