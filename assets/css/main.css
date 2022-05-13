@@ -7258,12 +7258,14 @@ ul li {
   list-style: none;
 }
 
-select, input, textarea, button {
+select, input, textarea, button, .contact-form .single-contact-btn .contact-btn,
+.contact-form .single-contact-btn .contact-btn:focus, .contact-form .single-contact-btn {
   box-shadow: none;
   outline: 0 !important;
 }
 
-button {
+button, .contact-form .single-contact-btn .contact-btn,
+.contact-form .single-contact-btn .contact-btn:focus, .contact-form .single-contact-btn {
   background: transparent;
   border: 0;
 }
@@ -7886,18 +7888,18 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   width: 100%;
   height: 100%;
   transition: 0.5s;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
+  -webkit-transition: "" 0.5s linear;
+  -moz-transition: "" 0.5s linear;
+  -ms-transition: "" 0.5s linear;
+  -o-transition: "" 0.5s linear;
 }
 
 .isotope .item:hover img {
   transform: scale(1.5);
-  -webkit-transform: scale(1, 5);
-  -moz-transform: scale(1, 5);
-  -ms-transform: scale(1, 5);
-  -o-transform: scale(1, 5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
 }
 
 .isotope-overlay {
@@ -7916,10 +7918,10 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transition: 0.5s;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
+  -webkit-transition: "" 0.5s linear;
+  -moz-transition: "" 0.5s linear;
+  -ms-transition: "" 0.5s linear;
+  -o-transition: "" 0.5s linear;
 }
 
 .isotope-overlay a {
@@ -8087,6 +8089,13 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 
 .hm-footer-copyright p a {
   color: #cad3e0;
+}
+
+.hm-footer-menu div * {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 18px;
+  color: green;
+  text-transform: uppercase;
 }
 
 #scroll-Top .return-to-top {

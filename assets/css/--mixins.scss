@@ -1,0 +1,20 @@
+@mixin font-style($size, $color, $tt: inherit) {
+  font-family:$sans-serif;
+  font-size:$size;
+  color:$color;
+  text-transform:$tt;
+}
+
+@mixin vendor-transition($property: all, $duration, $type: linear) {
+  -webkit-transition: $property $duration $type;
+  -moz-transition: $property $duration $type;
+  -ms-transition: $property $duration $type;
+  -o-transition: $property $duration $type;
+}
+
+@mixin vendor-transform($val) {
+  -webkit-transform:$val;
+  -moz-transform:$val;
+  -ms-transform:$val;
+  -o-transform:$val;
+}

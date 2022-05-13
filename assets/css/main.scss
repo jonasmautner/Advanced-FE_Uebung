@@ -6528,40 +6528,8 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
 
 /* GENERAL -------------------------*/
 
-$primary: #9ad23e;
-$white: #fff;
-$black: #000;
-
-$black-80: rgba(0,0,0,0.8);
-$black-20: rgba(0,0,0,0.2);
-
-$bluegray-4: #43485c;
-$bluegray-3: #676a81;
-$bluegray-2: #a6afcb;
-$bluegray-1: #cad3e0;
-
-$sans-serif: "Poppins", Arial, sans-serif;
-
-@mixin font-style($size, $color, $tt: inherit) {
-    font-family:$sans-serif;
-    font-size:$size;
-    color:$color;
-    text-transform:$tt;
-}
-
-@mixin vendor-transition($property: all, $duration, $type: linear) {
-    -webkit-transition: $property $duration $type;
-    -moz-transition: $property $duration $type;
-    -ms-transition: $property $duration $type;
-    -o-transition: $property $duration $type;
-}
-
-@mixin vendor-transform($val) {
-    -webkit-transform:$val;
-    -moz-transform:$val;
-    -ms-transform:$val;
-    -o-transform:$val;
-}
+@import "--variables";
+@import "--mixins";
 
 * {
     padding:0;
@@ -7150,12 +7118,12 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     width:100%;
     height:100%;
     transition: .5s;
-    @include vendor-transition(all, .5s);
+    @include vendor-transition('', .5s);
 }
 
-.isotope .item:hover  img{
+.isotope .item:hover img{
     transform:scale(1.5);
-    @include vendor-transform(scale(1,5));
+    @include vendor-transform(scale(1.5));
 }
 
 .isotope-overlay{
@@ -7171,7 +7139,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     transform:scale(0);
     @include vendor-transform(scale(0));
     transition: .5s;
-    @include vendor-transition(all, .5s);
+    @include vendor-transition('', .5s);
 }
 
 .isotope-overlay a {
@@ -7229,6 +7197,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 .contact-form .single-contact-btn {
+    @extend button;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -7245,6 +7214,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 .contact-form .single-contact-btn .contact-btn ,
 .contact-form .single-contact-btn .contact-btn:focus {
+    @extend button;
     margin-top:0;
     outline: 0 !important;
     border:0;
@@ -7314,6 +7284,10 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 .hm-footer-copyright p a {color: $bluegray-1;}
+
+.hm-footer-menu div * {
+    @include font-style(18px, green, uppercase);
+}
 
 #scroll-Top .return-to-top {
     position: fixed;

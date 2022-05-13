@@ -55,6 +55,19 @@ module.exports = function(grunt) {
                     dest: './assets/images/dest/',
                 }]
             }
+        },
+        prettify: {
+            options: {
+                indent: 3,
+                indent_char: ' ',
+                wrap_line_length: 78,
+                brace_style: 'expand',
+                unformatted: ['a', 'sub', 'sup', 'b', 'i', 'u']
+            },
+            html: {
+                src: './index.html',
+                dest: './index.pretty.html'
+            }
         }
     });
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -63,5 +76,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'uglify', 'imagemin']);
+    grunt.loadNpmTasks('grunt-prettify');
+    grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'uglify', 'imagemin', 'prettify']);
 };
