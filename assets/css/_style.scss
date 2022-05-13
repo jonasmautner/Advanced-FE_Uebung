@@ -764,7 +764,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .hm-footer-copyright p a {color: $bluegray-1;}
 
 .hm-footer-menu div * {
-    @include font-style(18px, $bluegray-1, uppercase);
+    @include font-style(16px, $bluegray-1, uppercase);
 }
 
 #scroll-Top .return-to-top {
